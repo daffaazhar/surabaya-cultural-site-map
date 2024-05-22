@@ -1,0 +1,164 @@
+[
+  {
+    "image": "/tugu-pahlawan.jpeg",
+    "name": "Tugu Pahlawan",
+    "description": "Museum Sepuluh Nopember adalah salah satu museum yang terletak di Kota Surabaya, dibangun pada tahun 1945. Museum ini dibangun dengan tujuan untuk mempelajari dan memperdalam peristiwa Pertempuran Sepuluh November 1945, Museum Sepuluh November beralamat di Jalan Pahlawan, Surabaya.",
+    "latitude": -7.2458,
+    "longitude": 112.7378,
+    "address": "Jl. Pahlawan, Alun-alun Contong, Kec. Bubutan, Surabaya, Jawa Timur 60174",
+    "tel": "(031) 3571100",
+    "openingHours": {
+      "Monday": null,
+      "Tuesday": "08:00 - 15:00",
+      "Wednesday": "08:00 - 15:00",
+      "Thursday": "08:00 - 15:00",
+      "Friday": "08:00 - 15:00",
+      "Saturday": "08:00 - 15:00",
+      "Sunday": "08:00 - 15:00"
+    }
+  },
+  {
+    "image": "/monumen-kapal-selam.jpg",
+    "name": "Monumen Kapal Selam",
+    "description": "Monumen Kapal Selam, atau disingkat Monkasel, adalah sebuah museum kapal selam yang terdapat di Embong Kaliasin, Genteng, Surabaya. Terletak di pusat kota yaitu di Jalan Pemuda, tepat di sebelah Plaza Surabaya, dan terdapat pintu akses untuk mengakses mal dari dalam monumen.",
+    "latitude": -7.265204133773773,
+    "longitude": 112.75010863862511,
+    "address": "Jl. Pemuda No.39, Embong Kaliasin, Kec. Genteng, Surabaya, Jawa Timur 60271",
+    "tel": "(031) 5490410",
+    "openingHours": {
+      "Monday": "08:00 - 21:00",
+      "Tuesday": "08:00 - 21:00",
+      "Wednesday": "08:00 - 21:00",
+      "Thursday": "08:00 - 21:00",
+      "Friday": "08:00 - 21:00",
+      "Saturday": "08:00 - 21:00",
+      "Sunday": "08:00 - 21:00"
+    }
+  },
+  {
+    "image": "/hos-tjokroaminoto.jpeg",
+    "name": "Museum H. O. S. Tjokroaminoto",
+    "description": "Museum HOS Tjokroaminoto merupakan rumah dari HOS Tjokroaminoto, kemudian rumah tersebut dijadikan museum oleh Pemerintah Kota Surabaya untuk dijadikan destinasi wisata bersejarah. Museum HOS Tjokroaminoto adalah sebuah situs bersejarah yang terletak di Surabaya, Indonesia.",
+    "latitude": -7.252372883991877,
+    "longitude": 112.73768526931254,
+    "address": "Jl. Peneleh Gg. VII No.29-31, Peneleh, Kec. Genteng, Surabaya, Jawa Timur 60274",
+    "tel": null,
+    "openingHours": {
+      "Monday": null,
+      "Tuesday": "08:00 - 15:00",
+      "Wednesday": "08:00 - 15:00",
+      "Thursday": "08:00 - 15:00",
+      "Friday": "08:00 - 15:00",
+      "Saturday": "08:00 - 15:00",
+      "Sunday": "08:00 - 15:00"
+    }
+  },
+  {
+    "image": "/museum-de-javasche-bank.jpg",
+    "name": "Museum De Javasche Bank",
+    "description": "Cagar Budaya Bank Indonesia terletak di Surabaya, Indonesia. Cagar Budaya ini secara khusus didirikan oleh Bank Indonesia dan dibuka pada tanggal 27 Januari 2012 setelah direstorasikan.",
+    "latitude": -7.234712721688659,
+    "longitude": 112.73655002328137,
+    "address": "Jl. Garuda No.1, Krembangan Sel., Kec. Krembangan, Surabaya, Jawa Timur 60175",
+    "tel": "0313531829",
+    "openingHours": {
+      "Monday": "08:00 - 16:00",
+      "Tuesday": "08:00 - 16:00",
+      "Wednesday": "08:00 - 16:00",
+      "Thursday": "08:00 - 16:00",
+      "Friday": "08:00 - 16:00",
+      "Saturday": "08:00 - 16:00",
+      "Sunday": "08:00 - 16:00"
+    }
+  },
+  {
+    "image": "/museum-wr-soepratman.webp",
+    "name": "Museum W.R. Soepratman",
+    "description": "Rumah W. R. Soepratman adalah rumah tempat wafatnya pencipta lagu Indonesia Raya yang kini telah menjadi museum sekaligus menjadi bangunan cagar budaya yang terletak di Jalan Mangga No. 21, Surabaya, Jawa Timur.",
+    "latitude": -7.2500393891834545,
+    "longitude": 112.7535978386251,
+    "address": "Jl. Mangga No.21, Tambaksari, Kec. Tambaksari, Surabaya, Jawa Timur 60136",
+    "tel": null,
+    "openingHours": {
+      "Monday": null,
+      "Tuesday": "08:00 - 15:00",
+      "Wednesday": "08:00 - 15:00",
+      "Thursday": "08:00 - 15:00",
+      "Friday": "08:00 - 15:00",
+      "Saturday": "08:00 - 15:00",
+      "Sunday": "08:00 - 15:00"
+    }
+  },
+  {
+    "image": "/siola.jpg",
+    "name": "Surabaya Museum (Gedung Siola)",
+    "description": "Gedung pemerintahan & museum dengan artefak yang mempertontonkan sejarah domestik & sipil.",
+    "latitude": -7.2557308116409205,
+    "longitude": 112.7378506,
+    "address": "Jl. Tunjungan No.1, Genteng, Kec. Genteng, Surabaya, Jawa Timur 60275",
+    "tel": null,
+    "openingHours": {
+      "Monday": null,
+      "Tuesday": "09:00 - 21:00",
+      "Wednesday": "09:00 - 21:00",
+      "Thursday": "09:00 - 21:00",
+      "Friday": "09:00 - 21:00",
+      "Saturday": "09:00 - 21:00",
+      "Sunday": "09:00 - 21:00"
+    }
+  },
+  {
+    "image": "/siola.jpg",
+    "name": "Museum Pendidikan Surabaya",
+    "description": "Museum Pendidikan Surabaya terletak di Jalan Genteng Kali No 10, Surabaya, Jawa Timur. Museum ini menjadi sarana kegiatan edukasi, riset, dan rekreasi di Kota Surabaya. Pengunjung dapat menikmati dinamika pendidikan di Indonesia, dari masa ke masa.",
+    "latitude": -7.255576124866205,
+    "longitude": 112.7427754386251,
+    "address": "Jl. Genteng Kali No.10, Genteng, Kec. Genteng, Surabaya, Jawa Timur 60275",
+    "tel": null,
+    "openingHours": {
+      "Monday": null,
+      "Tuesday": "08:00 - 21:00",
+      "Wednesday": "08:00 - 21:00",
+      "Thursday": "08:00 - 21:00",
+      "Friday": "08:00 - 21:00",
+      "Saturday": "08:00 - 21:00",
+      "Sunday": "08:00 - 21:00"
+    }
+  },
+  {
+    "image": "/museum-dr-soetomo.webp",
+    "name": "Museum Dr. Soetomo Surabaya",
+    "description": "Museum Dr. Soetomo adalah sebuah museum yang berada di Jalan Bubutan, Nomor 85-87, Kecamatan Bubutan, Kota Surabaya, Provinsi Jawa Timur, Indonesia. Fungsi khusus pendirian museum ini untuk memberikan informasi tentang Soetomo. Peresmian museum diadakan pada tanggal 29 November 2017.",
+    "latitude": -7.250322078174926,
+    "longitude": 112.7355814613749,
+    "address": "Jl. Bubutan No.85-87, Bubutan, Kec. Bubutan, Surabaya, Jawa Timur 60174",
+    "tel": "(031) 5467784",
+    "openingHours": {
+      "Monday": null,
+      "Tuesday": "08:00 - 21:00",
+      "Wednesday": "08:00 - 21:00",
+      "Thursday": "08:00 - 21:00",
+      "Friday": "08:00 - 21:00",
+      "Saturday": "08:00 - 21:00",
+      "Sunday": "08:00 - 21:00"
+    }
+  },
+  {
+    "image": "/museum-olahraga.jpg",
+    "name": "Museum Olahraga Surabaya",
+    "description": "Museum Olahraga Surabaya merupakan sebuah museum yang dibangun untuk menggambarkan semangat berolahraga bangsa Indonesia di Surabaya. Museum ini terletak di Jalan Indragiri No.6, Gelora Pancasila, Kota Surabaya.",
+    "latitude": -7.250322078174926,
+    "longitude": 112.7355814613749,
+    "address": "Jl. Indragiri, Darmo, Kec. Wonokromo, Surabaya, Jawa Timur 60241",
+    "tel": null,
+    "openingHours": {
+      "Monday": null,
+      "Tuesday": "08:00 - 15:00",
+      "Wednesday": "08:00 - 15:00",
+      "Thursday": "08:00 - 15:00",
+      "Friday": "08:00 - 15:00",
+      "Saturday": "08:00 - 15:00",
+      "Sunday": "08:00 - 15:00"
+    }
+  }
+]
