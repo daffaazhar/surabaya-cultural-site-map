@@ -1,10 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import Map from "@/components/Map";
 import sites from "../data/sites.json";
-import PlaceDetails from "@/components/PlaceDetails";
-import SiteList from "@/components/SiteList";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("@/components/Map"), { ssr: false });
+const PlaceDetails = dynamic(() => import("@/components/PlaceDetails"), {
+  ssr: false,
+});
+const SiteList = dynamic(() => import("@/components/SiteList"), { ssr: false });
 
 export default function Home() {
   const [selectedSite, setSelectedSite] = useState(null);
