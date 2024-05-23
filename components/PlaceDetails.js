@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { dayMap } from "@/utils/dayMap";
 import { X } from "lucide-react";
-import Image from "next/image";
 
 const PlaceDetails = ({ site, onClose }) => {
   if (!site) {
@@ -20,7 +20,8 @@ const PlaceDetails = ({ site, onClose }) => {
         alt={site.name}
         width={300}
         height={300}
-        loading="lazy"
+        placeholder="blur"
+        blurDataURL={site.image}
         className="w-full h-auto mt-4 rounded-md"
       />
       <p className="text-sm mt-4">{site.description}</p>
@@ -32,28 +33,31 @@ const PlaceDetails = ({ site, onClose }) => {
       </p>
 
       <h3 className="mt-2 text-sm">
-        <span className="font-bold">Jadwal Operasional:</span>
+        <span className="font-bold">Jadwal Operasional:</span>{" "}
+        {site.openingHours == null && "Tidak ada"}
       </h3>
-      <table className="w-full mt-2 border-collapse border border-gray-200 text-sm">
-        <thead>
-          <tr>
-            <th className="border border-gray-300 px-4 py-2">Hari</th>
-            <th className="border border-gray-300 px-4 py-2">Jam Buka</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Object.entries(site.openingHours).map(([day, hours]) => (
-            <tr key={day} className="text-center">
-              <td className="border border-gray-300 px-4 py-2">
-                {dayMap[day]}
-              </td>
-              <td className="border border-gray-300 px-4 py-2">
-                {hours ? `${hours} WIB` : "Tutup"}
-              </td>
+      {site.openingHours != null && (
+        <table className="w-full mt-2 border-collapse border border-gray-200 text-sm">
+          <thead>
+            <tr>
+              <th className="border border-gray-300 px-4 py-2">Hari</th>
+              <th className="border border-gray-300 px-4 py-2">Jam Buka</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {Object.entries(site.openingHours).map(([day, hours]) => (
+              <tr key={day} className="text-center">
+                <td className="border border-gray-300 px-4 py-2">
+                  {dayMap[day]}
+                </td>
+                <td className="border border-gray-300 px-4 py-2">
+                  {hours ? `${hours} WIB` : "Tutup"}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };

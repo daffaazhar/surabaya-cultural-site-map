@@ -1,24 +1,24 @@
 import Image from "next/image";
 import { dayMap } from "@/utils/dayMap";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { Input } from "./ui/input";
-import "@lottiefiles/lottie-player";
 
 const SiteList = ({ sites, onSelect }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const daysOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
   const checkIfOpen = (openingHours) => {
+    if (!openingHours) return { isOpen: false, closingTime: null };
+
     const now = new Date();
+    const daysOfWeek = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
     const currentDay = daysOfWeek[now.getDay()];
     const currentTime = now.toTimeString().split(" ")[0];
     const hours = openingHours[currentDay];
@@ -31,7 +31,18 @@ const SiteList = ({ sites, onSelect }) => {
   };
 
   const getNextOpeningTime = (openingHours) => {
+    if (!openingHours) return null;
+
     const now = new Date();
+    const daysOfWeek = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
     const currentDayIndex = now.getDay();
     const currentTime = now.toTimeString().split(" ")[0];
 
@@ -84,9 +95,10 @@ const SiteList = ({ sites, onSelect }) => {
         </div>
       ) : (
         filteredSites.map((site, index) => {
-          const { isOpen, closingTime } = checkIfOpen(site.openingHours);
+          const openingHours = site.openingHours;
+          const { isOpen, closingTime } = checkIfOpen(openingHours);
           const nextOpeningTime = !isOpen
-            ? getNextOpeningTime(site.openingHours)
+            ? getNextOpeningTime(openingHours)
             : null;
 
           return (
@@ -95,32 +107,37 @@ const SiteList = ({ sites, onSelect }) => {
               className="mb-4 p-4 border rounded-lg cursor-pointer hover:bg-gray-100 transition-all duration-300"
               onClick={() => onSelect(site)}
             >
-              {" "}
               <h3 className="text-xl font-semibold mb-2">{site.name}</h3>
               <p className="text-sm text-gray-600 mb-0.5">{site.address}</p>
               {site.tel != null && (
                 <p className="text-sm text-gray-600 mb-0.5">{site.tel}</p>
               )}
-              <div className="flex items-center gap-x-1">
-                {isOpen ? (
-                  <span className="text-sm text-green-600">
-                    {" "}
-                    Buka <span className="text-[8px]">•</span>{" "}
-                    <span className="text-sm text-gray-600">
-                      Hingga pukul {closingTime} WIB
-                    </span>
-                  </span>
-                ) : (
-                  <span className="text-sm text-red-500">
-                    {" "}
-                    Tutup<span className="text-[8px]">•</span>{" "}
-                    <span className="text-sm text-gray-600">
-                      Buka pada {nextOpeningTime.day} pukul{" "}
-                      {nextOpeningTime.hours} WIB
-                    </span>
-                  </span>
-                )}{" "}
-              </div>
+              {openingHours ? (
+                <div className="flex items-center gap-x-1">
+                  {isOpen ? (
+                    <>
+                      <span className="text-sm text-green-600">Buka</span>
+                      <span className="text-[8px]">•</span>{" "}
+                      <span className="text-sm text-gray-600">
+                        Hingga pukul {closingTime} WIB
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="text-sm text-red-500">Tutup</span>
+                      <span className="text-[8px]">•</span>{" "}
+                      <span className="text-sm text-gray-600">
+                        Buka pada {nextOpeningTime.day} pukul{" "}
+                        {nextOpeningTime.hours} WIB
+                      </span>
+                    </>
+                  )}
+                </div>
+              ) : (
+                <div className="text-sm text-red-500">
+                  Jam buka tidak tersedia
+                </div>
+              )}
             </div>
           );
         })

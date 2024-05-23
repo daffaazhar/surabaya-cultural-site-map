@@ -1,7 +1,25 @@
 [
   {
     "image": "/tugu-pahlawan.jpeg",
-    "name": "Tugu Pahlawan",
+    "name": "Monumen Tugu Pahlawan",
+    "description": "Monumen Tugu Pahlawan adalah bangunan bersejarah yang menjadi salah satu ikon ibu kota Provinsi Jawa Timur ini. Tugu Pahlawan dibangun untuk memperingati peristiwa Pertempuran 10 November 1945 di Surabaya. Dalam peristiwa heroik itu, banyak pejuang arek-arek Surabaya yang gugur. Bangunan Tugu Pahlawan berlokasi di Jalan Pahlawan, Alun-alun Contong, Bubutan, Kota Surabaya.",
+    "latitude": -7.2458,
+    "longitude": 112.7378,
+    "address": "Jl. Pahlawan, Alun-alun Contong, Kec. Bubutan, Surabaya, Jawa Timur 60174",
+    "tel": "(031) 3571100",
+    "openingHours": {
+      "Monday": null,
+      "Tuesday": "08:00 - 15:00",
+      "Wednesday": "08:00 - 15:00",
+      "Thursday": "08:00 - 15:00",
+      "Friday": "08:00 - 15:00",
+      "Saturday": "08:00 - 15:00",
+      "Sunday": "08:00 - 15:00"
+    }
+  },
+  {
+    "image": "/monumen-10-nopember.jpg",
+    "name": "Museum Sepuluh Nopember Surabaya",
     "description": "Museum Sepuluh Nopember adalah salah satu museum yang terletak di Kota Surabaya, dibangun pada tahun 1945. Museum ini dibangun dengan tujuan untuk mempelajari dan memperdalam peristiwa Pertempuran Sepuluh November 1945, Museum Sepuluh November beralamat di Jalan Pahlawan, Surabaya.",
     "latitude": -7.2458,
     "longitude": 112.7378,
@@ -160,5 +178,15 @@
       "Saturday": "08:00 - 15:00",
       "Sunday": "08:00 - 15:00"
     }
+  },
+  {
+    "image": "/house-of-sampoerna.jpg",
+    "name": "House of Sampoerna",
+    "description": "House of Sampoerna adalah sebuah museum tembakau dan markas besar Sampoerna yang terletak di Surabaya. Gaya arsitektur dari bangunan utamanya yang dipengaruhi oleh gaya kolonial Belanda dibangun pada 1862 dan sekarang menjadi situs sejarah..",
+    "latitude": -7.2305306027714895,
+    "longitude": 112.73419295422423,
+    "address": "Taman Jl. Sampoerna No.6, Krembangan Utara, Kec. Pabean Cantikan, Surabaya, Jawa Timur 60163",
+    "tel": null,
+    "openingHours": null
   }
 ]
