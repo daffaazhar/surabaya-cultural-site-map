@@ -1,3 +1,4 @@
+import { dayMap } from "@/utils/dayMap";
 import { X } from "lucide-react";
 import Image from "next/image";
 
@@ -19,6 +20,7 @@ const PlaceDetails = ({ site, onClose }) => {
         alt={site.name}
         width={300}
         height={300}
+        loading="lazy"
         className="w-full h-auto mt-4 rounded-md"
       />
       <p className="text-sm mt-4">{site.description}</p>
@@ -42,9 +44,11 @@ const PlaceDetails = ({ site, onClose }) => {
         <tbody>
           {Object.entries(site.openingHours).map(([day, hours]) => (
             <tr key={day} className="text-center">
-              <td className="border border-gray-300 px-4 py-2">{day}</td>
               <td className="border border-gray-300 px-4 py-2">
-                {hours || "Tutup"}
+                {dayMap[day]}
+              </td>
+              <td className="border border-gray-300 px-4 py-2">
+                {hours ? `${hours} WIB` : "Tutup"}
               </td>
             </tr>
           ))}

@@ -1,3 +1,4 @@
+import { dayMap } from "@/utils/dayMap";
 import Image from "next/image";
 
 const SiteList = ({ sites, onSelect }) => {
@@ -17,10 +18,11 @@ const SiteList = ({ sites, onSelect }) => {
     const currentTime = now.toTimeString().split(" ")[0];
     const hours = openingHours[currentDay];
 
-    if (!hours) return false;
+    if (!hours) return { isOpen: false, closingTime: null };
 
     const [startTime, endTime] = hours.split(" - ");
-    return currentTime >= startTime && currentTime <= endTime;
+    const isOpen = currentTime >= startTime && currentTime <= endTime;
+    return { isOpen, closingTime: endTime };
   };
 
   const getNextOpeningTime = (openingHours) => {
@@ -33,8 +35,8 @@ const SiteList = ({ sites, onSelect }) => {
       const day = daysOfWeek[dayIndex];
       const hours = openingHours[day];
 
-      if (hours && (i !== 0 || currentTime < hours.split("–")[0])) {
-        return { day, hours: hours.split("–")[0] };
+      if (hours && (i !== 0 || currentTime < hours.split("-")[0])) {
+        return { day: dayMap[day], hours: hours.split("-")[0] };
       }
     }
     return null;
@@ -55,7 +57,7 @@ const SiteList = ({ sites, onSelect }) => {
         Menampilkan: {sites.length} hasil
       </p>
       {sites.map((site, index) => {
-        const isOpen = checkIfOpen(site.openingHours);
+        const { isOpen, closingTime } = checkIfOpen(site.openingHours);
         const nextOpeningTime = !isOpen
           ? getNextOpeningTime(site.openingHours)
           : null;
@@ -73,15 +75,24 @@ const SiteList = ({ sites, onSelect }) => {
               <p className="text-sm text-gray-600 mb-0.5">{site.tel}</p>
             )}
             <div className="flex items-center gap-x-1">
-              <span className="text-sm text-red-500">
-                {isOpen ? "Buka" : "Tutup"}
-              </span>{" "}
-              <span className="text-[8px]">•</span>{" "}
-              {!isOpen && nextOpeningTime && (
-                <span className="text-sm text-gray-600">
-                  Buka {nextOpeningTime.day} pukul {nextOpeningTime.hours} WIB
+              {isOpen ? (
+                <span className="text-sm text-green-600">
+                  {" "}
+                  Buka <span className="text-[8px]">•</span>{" "}
+                  <span className="text-sm text-gray-600">
+                    Hingga pukul {closingTime} WIB
+                  </span>
                 </span>
-              )}
+              ) : (
+                <span className="text-sm text-red-500">
+                  {" "}
+                  Tutup<span className="text-[8px]">•</span>{" "}
+                  <span className="text-sm text-gray-600">
+                    Buka pada {nextOpeningTime.day} pukul{" "}
+                    {nextOpeningTime.hours} WIB
+                  </span>
+                </span>
+              )}{" "}
             </div>
           </div>
         );

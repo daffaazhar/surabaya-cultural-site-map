@@ -20,7 +20,7 @@ export default function Home() {
   const handleMarkerClick = (site) => {
     setSelectedSite(site);
     setMapCenter([site.latitude, site.longitude]);
-    setMapZoom(15);
+    setMapZoom(100);
   };
 
   const handleCloseDetails = () => {
@@ -32,7 +32,7 @@ export default function Home() {
   const handleSelectSite = (site) => {
     setSelectedSite(site);
     setMapCenter([site.latitude, site.longitude]);
-    setMapZoom(15);
+    setMapZoom(100);
   };
 
   return (
